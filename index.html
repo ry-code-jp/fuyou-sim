@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9132302948928758" crossorigin="anonymous"></script>
+<title>扶養内パートの働き損シミュレーター｜年収の壁（110・130・160万円）と手取りを1分でチェック【2026年版】</title>
+<meta name="description" content="パートはいくらまで働くのが得？130万円の壁を超えたら手取りはいくら減る？何万円まで働けば取り返せる？2026年10月の社会保険改正（106万円の壁撤廃）に対応した年収の壁と世帯手取りを無料でシミュレーション。">
+<link rel="canonical" href="https://fuyou-sim.com/">
+<meta property="og:url" content="https://fuyou-sim.com/">
+<meta property="og:image" content="https://fuyou-sim.com/ogp.png">
+<meta property="og:title" content="扶養内パートの働き損シミュレーター｜年収の壁と世帯手取りを1分でチェック">
+<meta property="og:description" content="「いくらまで働くのが得？」「130万円を超えたらいくら損？」を無料で見える化。2026年10月の社会保険改正に対応。">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "パートの「年収の壁」は2026年にどう変わりましたか？",
+      "acceptedAnswer": {"@type": "Answer", "text": "令和7年度税制改正で、パート本人に所得税がかかり始めるラインは給与収入160万円（基礎控除最大95万円＋給与所得控除65万円）に、住民税は約110万円に上がりました。配偶者特別控除は妻の給与収入160万円まで満額38万円が受けられます。さらに2026年10月からは社会保険のいわゆる「106万円の壁」（月額8.8万円の賃金要件）が撤廃され、従業員51人以上の企業で週20時間以上働く場合は賃金額にかかわらず社会保険に加入します。"}
+    },
+    {
+      "@type": "Question",
+      "name": "130万円の壁を超えるとどうなりますか？",
+      "acceptedAnswer": {"@type": "Answer", "text": "勤め先で社会保険に加入しない働き方（週20時間未満、または従業員50人以下など）で年収130万円以上になると、配偶者の社会保険の扶養から外れ、自分で国民健康保険と国民年金（2026年度は月額17,920円）を払う必要があります。年間の負担は約40万円前後になることが多く、手取りが逆転する「働き損ゾーン」が発生します。おおむね150〜160万円まで働けば手取りが回復するケースが多いです（60歳以上は基準が180万円）。"}
+    },
+    {
+      "@type": "Question",
+      "name": "2026年10月の社会保険改正（106万円の壁撤廃）とは？",
+      "acceptedAnswer": {"@type": "Answer", "text": "2025年6月に成立した年金制度改正法により、2026年10月1日から短時間労働者の社会保険加入要件のうち「月額賃金8.8万円以上（年収約106万円）」の要件が撤廃されます。これにより、従業員51人以上の企業で週20時間以上働く人は、賃金額にかかわらず厚生年金・健康保険に加入します。企業規模要件も2027年10月から段階的に撤廃され、2035年10月にはすべての企業が対象になる予定です。"}
+    },
+    {
+      "@type": "Question",
+      "name": "社会保険に入るのは損ですか？",
+      "acceptedAnswer": {"@type": "Answer", "text": "目先の手取りは保険料の分（給与の約15%）減りますが、厚生年金で将来の年金額が増え、傷病手当金や出産手当金など健康保険の給付も受けられるようになります。国民年金・国保を自分で払う130万円超えと違い、保険料の半分は会社が負担するため、長期的には加入した方が有利になるケースが多いです。"}
+    }
+  ]
+}
+</script>
+<style>
+  :root{
+    --page:#f8f5f2;
+    --surface:#ffffff;
+    --ink:#2b2118;
+    --ink-2:#5a4d42;
+    --muted:#9a8b7d;
+    --grid:#ece4dc;
+    --baseline:#d4c7ba;
+    --border:rgba(43,33,24,0.08);
+    --navy:#3d2b1a;
+    --accent:#b4551d;
+    --accent-strong:#96430f;
+    --accent-soft:#f9efe7;
+    --accent-line:#eed7c4;
+    --bar:#d97b2e;
+    --good:#0f7b33;
+    --good-soft:#eef7f0;
+    --good-line:#cde5d3;
+    --critical:#c43d3d;
+    --warning-bg:#fdf7e7;
+    --warning-border:#ecdcae;
+    --warning-ink:#6b5310;
+    --shadow-card:0 1px 2px rgba(61,43,26,.05), 0 10px 30px -12px rgba(61,43,26,.12);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:system-ui,-apple-system,"Segoe UI","Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic UI",sans-serif;
+    background:var(--page);color:var(--ink);line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent);}
+  .wrap{max-width:960px;margin:0 auto;padding:0 18px;}
+
+  header.site{
+    background:var(--surface);
+    border-bottom:1px solid var(--grid);
+    box-shadow:0 1px 0 rgba(61,43,26,.03);
+    position:relative;
+  }
+  header.site::before{
+    content:"";display:block;height:3px;
+    background:linear-gradient(90deg,var(--accent-strong),var(--bar) 55%,#ecb488);
+  }
+  header.site .wrap{display:flex;align-items:center;gap:12px;padding-top:13px;padding-bottom:13px;}
+  .logo-mark{flex:none;width:36px;height:36px;}
+  .logo-text .logo{font-weight:700;font-size:17.5px;letter-spacing:.02em;color:var(--navy);line-height:1.3;}
+  .logo-text .logo-sub{font-size:11.5px;color:var(--muted);letter-spacing:.02em;}
+
+  .hero-band{
+    background:linear-gradient(180deg,#f7e9dd 0%, #f7efe8 55%, var(--page) 100%);
+    border-bottom:1px solid rgba(180,85,29,.06);
+  }
+  .hero{padding:44px 0 34px;}
+  .hero h1{font-size:26px;line-height:1.5;letter-spacing:.01em;color:var(--navy);font-weight:700;}
+  .hero h1 .accent-line{color:var(--accent);}
+  .hero p.lead{margin-top:12px;color:var(--ink-2);font-size:15.5px;max-width:680px;}
+  .hero .badges{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px;}
+  .badge{
+    display:inline-flex;align-items:center;gap:6px;
+    font-size:12.5px;background:var(--surface);color:var(--ink-2);
+    border:1px solid var(--accent-line);
+    border-radius:999px;padding:4.5px 13px;font-weight:600;
+    box-shadow:0 1px 2px rgba(61,43,26,.04);
+  }
+  .badge::before{
+    content:"";flex:none;width:14px;height:14px;border-radius:50%;
+    background:var(--accent) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 8.5l2.6 2.6L12 5.5" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>') center/10px no-repeat;
+  }
+
+  .card{
+    background:var(--surface);border:1px solid var(--border);border-radius:16px;
+    padding:26px 24px;margin:22px 0;
+    box-shadow:var(--shadow-card);
+  }
+  @media(max-width:560px){.card{padding:22px 18px;}}
+  .card h2{
+    font-size:19px;margin-bottom:4px;display:flex;align-items:center;gap:10px;
+    color:var(--navy);letter-spacing:.02em;
+  }
+  .card h2 .num{
+    background:linear-gradient(135deg,var(--accent),var(--accent-strong));
+    color:#fff;border-radius:9px;width:28px;height:28px;
+    display:inline-flex;align-items:center;justify-content:center;font-size:14px;flex:none;
+    box-shadow:0 2px 6px rgba(180,85,29,.3);
+  }
+  .card .sub{font-size:13.5px;color:var(--muted);margin-bottom:18px;}
+
+  form .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px 18px;}
+  @media(max-width:560px){form .grid{grid-template-columns:1fr;}}
+  .field label{display:block;font-size:14px;font-weight:700;margin-bottom:5px;color:var(--ink);}
+  .field .hint{font-weight:400;color:var(--muted);font-size:12.5px;display:block;margin-top:1px;}
+  .field .inputrow{display:flex;align-items:center;gap:8px;}
+  input[type=number],select{
+    width:100%;padding:11px 13px;font-size:16px;border:1.5px solid var(--grid);
+    border-radius:10px;background:#fdfbf9;color:var(--ink);font-family:inherit;
+    transition:border-color .15s, box-shadow .15s, background .15s;
+  }
+  input[type=number]:hover,select:hover{border-color:var(--baseline);}
+  input[type=number]:focus,select:focus{
+    outline:none;border-color:var(--accent);background:#fff;
+    box-shadow:0 0 0 3px rgba(217,123,46,.15);
+  }
+  .unit{font-size:14px;color:var(--ink-2);flex:none;font-weight:600;}
+  .radio-group{display:flex;gap:10px;}
+  .radio-group label{
+    flex:1;border:1.5px solid var(--grid);border-radius:11px;padding:11px 8px;
+    text-align:center;font-size:15px;font-weight:700;cursor:pointer;background:#fdfbf9;
+    display:flex;flex-direction:column;gap:1px;margin:0;color:var(--ink-2);
+    transition:all .15s;position:relative;
+  }
+  .radio-group label small{font-weight:400;font-size:11.5px;color:var(--muted);}
+  .radio-group input{display:none;}
+  .radio-group label.on{
+    border-color:var(--accent);background:var(--accent-soft);color:var(--accent-strong);
+    box-shadow:0 0 0 3px rgba(217,123,46,.12);
+  }
+  .radio-group label.on::after{
+    content:"✓";position:absolute;top:-9px;right:-6px;
+    width:20px;height:20px;border-radius:50%;background:var(--accent);color:#fff;
+    font-size:12px;line-height:20px;font-weight:700;
+    box-shadow:0 2px 5px rgba(180,85,29,.35);
+  }
+  details.adv{
+    grid-column:1/-1;background:#faf7f4;border:1px solid var(--grid);border-radius:11px;
+    padding:12px 15px;
+  }
+  details.adv summary{cursor:pointer;font-weight:700;font-size:13.5px;color:var(--ink-2);list-style:none;}
+  details.adv summary::-webkit-details-marker{display:none;}
+  details.adv summary::before{content:"▸ ";color:var(--accent);}
+  details.adv[open] summary::before{content:"▾ ";}
+  details.adv .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px 18px;margin-top:12px;}
+  @media(max-width:560px){details.adv .grid2{grid-template-columns:1fr;}}
+  .btn{
+    display:block;width:100%;margin-top:24px;padding:15px;font-size:17px;font-weight:700;
+    background:linear-gradient(180deg,#c96a28,var(--accent));color:#fff;border:none;border-radius:12px;cursor:pointer;
+    font-family:inherit;letter-spacing:.06em;
+    box-shadow:0 4px 14px rgba(180,85,29,.32), inset 0 1px 0 rgba(255,255,255,.18);
+    transition:transform .12s, box-shadow .12s, filter .12s;
+  }
+  .btn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 6px 18px rgba(180,85,29,.38), inset 0 1px 0 rgba(255,255,255,.18);}
+  .btn:active{transform:translateY(0);}
+  .privacy-note{
+    margin-top:12px;font-size:12px;color:var(--muted);text-align:center;
+    display:flex;align-items:center;justify-content:center;gap:5px;
+  }
+  .privacy-note::before{content:"🔒";font-size:11px;}
+
+  #results{display:none;}
+  .hero-figure{text-align:center;padding:10px 0 6px;}
+  .hero-figure .label{font-size:14.5px;color:var(--ink-2);font-weight:700;letter-spacing:.03em;}
+  .hero-figure .value{font-size:36px;font-weight:700;line-height:1.35;letter-spacing:.01em;color:var(--navy);}
+  .hero-figure .value.loss{color:var(--critical);}
+  .hero-figure .value.ok{color:var(--good);}
+  .hero-figure .note{
+    display:inline-block;font-size:14px;margin-top:6px;font-weight:700;
+    border-radius:999px;padding:5px 16px;
+  }
+  .hero-figure .note.ok{color:var(--good);background:var(--good-soft);border:1px solid var(--good-line);}
+  .hero-figure .note.warn{color:var(--critical);background:#fbeeee;border:1px solid #edcece;}
+  .hero-figure .note.mid{color:var(--ink-2);background:#f4f1ee;border:1px solid var(--grid);}
+
+  .stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px;}
+  @media(min-width:720px){.stat-grid{grid-template-columns:1fr 1fr 1fr;}}
+  .stat{
+    border:1px solid var(--grid);border-left:3px solid var(--accent);
+    border-radius:10px;padding:12px 14px;background:#fdfbf9;
+  }
+  .stat .k{font-size:12.5px;color:var(--muted);font-weight:600;}
+  .stat .v{font-size:21px;font-weight:700;margin-top:2px;color:var(--navy);}
+  .stat .v small{font-size:12px;font-weight:600;color:var(--ink-2);}
+
+  .alert{
+    background:var(--warning-bg);border:1px solid var(--warning-border);
+    border-radius:10px;padding:13px 15px;font-size:14px;margin-top:12px;color:var(--warning-ink);
+  }
+  .alert strong{color:#584307;}
+  .alert.danger{background:#fbeeee;border-color:#edcece;color:#7c2626;}
+  .alert.danger strong{color:#7c2626;}
+  .goodnote{
+    background:var(--good-soft);border:1px solid var(--good-line);border-radius:10px;
+    padding:13px 15px;font-size:14px;margin-top:12px;color:#1d4d28;
+  }
+
+  .chart-box{position:relative;margin-top:16px;}
+  .chart-box svg{width:100%;height:auto;display:block;}
+  .tooltip{
+    position:absolute;pointer-events:none;background:var(--navy);color:#fff;
+    font-size:12px;line-height:1.55;border-radius:8px;padding:8px 11px;
+    opacity:0;transition:opacity .12s;white-space:nowrap;z-index:5;transform:translate(-50%,-100%);
+    box-shadow:0 4px 14px rgba(61,43,26,.3);
+  }
+  .tooltip .t{font-weight:700;}
+  .chart-legend-note{font-size:12.5px;color:var(--muted);margin-top:10px;}
+
+  table.walls{width:100%;border-collapse:collapse;margin-top:12px;font-size:14.5px;}
+  table.walls th{text-align:left;font-weight:700;color:var(--ink-2);padding:9px 8px;border-bottom:2px solid var(--grid);font-size:13px;letter-spacing:.03em;}
+  table.walls td{padding:10px 8px;border-bottom:1px solid var(--grid);vertical-align:top;}
+  table.walls td.line{white-space:nowrap;font-weight:700;color:var(--navy);}
+  table.walls tr.hit td{background:var(--accent-soft);}
+  table.walls tr.hit td.line{color:var(--accent-strong);}
+  table.walls td .memo{display:block;font-size:12.5px;color:var(--muted);font-weight:400;}
+  table.walls .tag{display:inline-block;font-size:11px;font-weight:700;border-radius:999px;padding:1px 9px;margin-left:6px;vertical-align:1px;}
+  table.walls .tag.you{background:var(--accent);color:#fff;}
+  @media(max-width:560px){table.walls{font-size:13.5px;} table.walls td{padding:9px 5px;}}
+
+  .tips li{margin:10px 0;font-size:15px;list-style:none;padding-left:30px;position:relative;color:var(--ink-2);}
+  .tips li strong{color:var(--ink);}
+  .tips li::before{
+    content:"✓";position:absolute;left:0;top:2px;
+    width:19px;height:19px;border-radius:50%;
+    background:var(--accent-soft);color:var(--accent);border:1px solid var(--accent-line);
+    font-size:11px;line-height:18px;text-align:center;font-weight:700;
+  }
+
+  .share-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:18px;padding-top:16px;border-top:1px solid var(--grid);}
+  .share-row .s-label{font-size:13px;font-weight:700;color:var(--ink-2);}
+  .share-btn{
+    display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:999px;
+    font-size:13px;font-weight:700;text-decoration:none;cursor:pointer;border:none;font-family:inherit;
+    transition:filter .15s, transform .12s;
+  }
+  .share-btn:hover{filter:brightness(1.08);transform:translateY(-1px);}
+  .share-btn.x{background:#0f1419;color:#fff;}
+  .share-btn.line{background:#06c755;color:#fff;}
+  .share-btn.copy{background:var(--accent-soft);color:var(--accent-strong);border:1px solid var(--accent-line);}
+
+  .article-list a{
+    display:block;padding:15px 17px;border:1px solid var(--grid);border-radius:12px;
+    margin:10px 0;text-decoration:none;background:#fdfbf9;
+    transition:border-color .15s, background .15s;
+  }
+  .article-list a:hover{border-color:var(--accent-line);background:var(--accent-soft);}
+  .article-list .a-title{font-size:15.5px;font-weight:700;color:var(--navy);}
+  .article-list .a-desc{font-size:13.5px;color:var(--muted);margin-top:3px;}
+  .article-list .a-more{font-size:13px;font-weight:700;color:var(--accent);margin-top:5px;display:inline-block;}
+
+  .faq details{border-bottom:1px solid var(--grid);padding:4px 0;}
+  .faq details:last-of-type{border-bottom:none;}
+  .faq summary{
+    cursor:pointer;font-weight:700;font-size:15.5px;padding:12px 0;list-style:none;
+    position:relative;padding-left:30px;padding-right:26px;color:var(--ink);
+  }
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary::before{
+    content:"Q";position:absolute;left:0;top:12px;
+    width:21px;height:21px;border-radius:6px;background:var(--accent-soft);color:var(--accent);
+    border:1px solid var(--accent-line);
+    font-size:12px;line-height:20px;text-align:center;font-weight:700;
+  }
+  .faq summary::after{content:"＋";position:absolute;right:2px;color:var(--muted);font-weight:400;}
+  .faq details[open] summary::after{content:"−";}
+  .faq .a{font-size:15px;color:var(--ink-2);padding:0 0 16px 30px;}
+
+  details.basis{margin-top:16px;font-size:13.5px;color:var(--ink-2);
+    background:#faf7f4;border:1px solid var(--grid);border-radius:10px;padding:12px 15px;}
+  details.basis summary{cursor:pointer;font-weight:700;color:var(--ink-2);font-size:13.5px;}
+  details.basis ul{margin:10px 0 4px 18px;}
+  details.basis li{margin:5px 0;}
+
+  .disclaimer{
+    font-size:13px;color:var(--muted);background:var(--surface);
+    border:1px solid var(--grid);border-radius:12px;padding:14px 16px;margin-top:20px;
+  }
+  footer.site{
+    margin-top:40px;background:var(--navy);
+    padding:30px 0 34px;font-size:12px;color:#b3a396;
+  }
+  footer.site .f-logo{display:flex;align-items:center;gap:9px;margin-bottom:10px;}
+  footer.site .f-logo svg{width:26px;height:26px;}
+  footer.site .f-logo b{color:#fff;font-size:14px;letter-spacing:.03em;}
+  footer.site p{margin:4px 0;}
+  footer.site a{color:#dcccbd;}
+
+  @media(max-width:560px){
+    .hero{padding:32px 0 26px;}
+    .hero h1{font-size:21.5px;}
+    .hero p.lead{font-size:14.5px;}
+    .badge{font-size:11px;padding:4px 11px;}
+    .card h2{font-size:17.5px;}
+    .hero-figure .value{font-size:27px;}
+    .hero-figure .note{font-size:13px;padding:4px 13px;}
+    .stat{padding:10px 11px;}
+    .stat .v{font-size:17.5px;}
+    .stat .v small{font-size:11px;}
+    .btn{font-size:16px;}
+  }
+  @media(max-width:374px){
+    .stat-grid{grid-template-columns:1fr;}
+    .logo-text .logo-sub{font-size:10px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true">
+      <rect x="2" y="2" width="36" height="36" rx="9" fill="#b4551d"/>
+      <path d="M9 28 C 13 28, 14 14, 20 14 C 26 14, 25 28, 31 28" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/>
+      <line x1="25.5" y1="9" x2="25.5" y2="21" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="2.4 2.6"/>
+      <rect x="10" y="31.4" width="20" height="2.4" rx="1.2" fill="#ecb488"/>
+    </svg>
+    <div class="logo-text">
+      <div class="logo">扶養内パートの働き損シミュレーター</div>
+      <div class="logo-sub">年収の壁・社会保険・世帯の手取りを1分で見える化</div>
+    </div>
+  </div>
+</header>
+
+<div class="hero-band">
+  <div class="wrap">
+    <section class="hero">
+      <h1>パート、いくらまで働くのが得？<br><span class="accent-line">年収の壁と世帯の手取り</span>を1分でチェック</h1>
+      <p class="lead">「130万円を超えたら手取りはいくら減る？」「何万円まで働けば取り返せる？」「2026年10月の社会保険改正で私はどうなる？」——扶養内で働くパート・アルバイトの悩みを、5つの質問に答えるだけで無料で数字にします。</p>
+      <div class="badges">
+        <span class="badge">2026年10月の社会保険改正に対応</span>
+        <span class="badge">国税庁・厚労省の公表値を使用</span>
+        <span class="badge">登録不要・無料</span>
+        <span class="badge">入力データは保存されません</span>
+      </div>
+    </section>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <section class="card">
+    <h2><span class="num">1</span>あなたの働き方を入力</h2>
+    <p class="sub">すべて概算でOK。あとから何度でも変えられます。<span style="display:block;margin-top:2px;">最終更新：2026年7月18日（令和7年度税制改正・2026年10月施行の社会保険適用拡大に対応）</span></p>
+    <form id="form" onsubmit="return false;">
+      <div class="grid">
+        <div class="field">
+          <label for="income">あなたのパート年収（見込み） <span class="hint">1年間（1〜12月）の給与合計・交通費除く</span></label>
+          <div class="inputrow"><input type="number" id="income" value="120" min="0" max="400"><span class="unit">万円</span></div>
+        </div>
+        <div class="field">
+          <label for="age">あなたの年齢 <span class="hint">介護保険料・扶養基準（60歳以上は180万円）の判定に使用</span></label>
+          <div class="inputrow"><input type="number" id="age" value="40" min="18" max="74"><span class="unit">歳</span></div>
+        </div>
+        <div class="field">
+          <label>週の労働時間</label>
+          <div class="radio-group" id="hoursGroup">
+            <label class="on"><input type="radio" name="hours" value="under20" checked>週20時間未満<small>社会保険の加入対象外</small></label>
+            <label><input type="radio" name="hours" value="over20">週20時間以上<small>勤務先の社保に入る可能性</small></label>
+          </div>
+        </div>
+        <div class="field">
+          <label>勤め先の従業員数 <span class="hint">おおよそでOK（グループ全体でなく企業単位）</span></label>
+          <div class="radio-group" id="sizeGroup">
+            <label class="on"><input type="radio" name="size" value="small" checked>50人以下</label>
+            <label><input type="radio" name="size" value="large">51人以上</label>
+          </div>
+        </div>
+        <div class="field">
+          <label for="spouseIncome">配偶者の年収 <span class="hint">額面・賞与込み（配偶者控除の計算に使用）</span></label>
+          <div class="inputrow"><input type="number" id="spouseIncome" value="500" min="0" max="3000"><span class="unit">万円</span></div>
+        </div>
+        <details class="adv">
+          <summary>詳細設定（任意）——配偶者の会社に「配偶者手当」がある人向け</summary>
+          <div class="grid2">
+            <div class="field">
+              <label for="allowance">配偶者手当の月額 <span class="hint">家族手当・扶養手当など。なければ0</span></label>
+              <div class="inputrow"><input type="number" id="allowance" value="0" min="0" max="100000" step="1000"><span class="unit">円/月</span></div>
+            </div>
+            <div class="field">
+              <label for="allowanceLine">手当の支給条件 <span class="hint">会社の規程で確認（不明なら130万円が多数派）</span></label>
+              <select id="allowanceLine">
+                <option value="1030000">年収103万円以下</option>
+                <option value="1300000" selected>年収130万円未満</option>
+                <option value="1500000">年収150万円以下</option>
+              </select>
+            </div>
+          </div>
+        </details>
+      </div>
+      <button class="btn" id="calcBtn">結果を見る</button>
+      <p class="privacy-note">入力内容はこのページ内でのみ計算され、サーバーに送信・保存されません。</p>
+    </form>
+  </section>
+
+  <!-- AdSense枠①：審査通過後にここへ広告コードを挿入 -->
+
+  <div id="results">
+
+    <section class="card">
+      <div class="hero-figure">
+        <div class="label">あなたの働き方の判定（2026年10月以降のルール）</div>
+        <div class="value" id="judgeValue">—</div>
+        <div class="note" id="judgeNote"></div>
+      </div>
+      <div class="stat-grid" id="judgeStats"></div>
+      <div id="judgeAlerts"></div>
+      <div class="share-row">
+        <span class="s-label">このツールをシェア：</span>
+        <a class="share-btn x" id="shareX" href="#" target="_blank" rel="noopener">𝕏 ポスト</a>
+        <a class="share-btn line" id="shareLine" href="#" target="_blank" rel="noopener">LINEで送る</a>
+        <button class="share-btn copy" id="copyUrlBtn">🔗 URLをコピー</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2><span class="num">2</span>世帯の手取りカーブ——壁の場所と働き損ゾーン</h2>
+      <p class="sub">あなたの年収を横軸に、世帯の手取りがいくら増えるか（あなたの手取り − 配偶者の税負担増 ＋ 配偶者手当）を描いたグラフです。</p>
+      <div class="chart-box" id="chartBox">
+        <div id="chart"></div>
+        <div class="tooltip" id="tooltip"></div>
+      </div>
+      <p class="chart-legend-note" id="chartNote"></p>
+      <details class="basis">
+        <summary>計算の前提と制度の根拠（2026年7月時点）</summary>
+        <ul>
+          <li>所得税：基礎控除は令和7年度税制改正後の令和8年分（合計所得132万円以下95万円など）、給与所得控除は最低保障65万円。パート本人の所得税は給与収入160万円から発生。復興特別所得税2.1%込み。</li>
+          <li>住民税：非課税ライン＝合計所得45万円（給与収入110万円、単身・1級地の目安。自治体で異なる）。所得割10%＋均等割・森林環境税5,000円、基礎控除43万円で概算。</li>
+          <li>社会保険の加入判定：2026年10月1日施行の改正後ルール（週20時間以上かつ従業員51人以上なら賃金額を問わず加入。2025年6月成立の年金制度改正法・日本年金機構公表資料）。2026年9月までは月額賃金8.8万円以上の要件も適用されます。</li>
+          <li>勤務先の社会保険料（本人負担）：健康保険5.0%（協会けんぽ全国平均10%の折半）＋介護保険0.8%（40〜64歳）＋厚生年金9.15%＋雇用保険0.5%（令和8年度・一般の事業）で概算。</li>
+          <li>扶養から外れた場合：国民年金は令和8年度の月額17,920円（60歳以上は納付不要）、国民健康保険は全国平均的な料率（所得割10.5%＋均等割5.5万円）で概算。</li>
+          <li>社会保険の被扶養者基準：年収130万円未満（60歳以上・障害者は180万円未満）。2026年4月から雇用契約ベースの判定に変更。</li>
+          <li>配偶者控除・配偶者特別控除：国税庁タックスアンサーNo.1191・No.1195の令和7年分以降の表（配偶者の給与160万円まで満額38万円、約201万円で消失）。住民税側は最大33万円。配偶者の税負担増は限界税率で概算。</li>
+          <li>グラフは1万円刻みの計算値。パート収入には所得税・住民税・社会保険料以外の控除（生命保険料控除など）を考慮していません。</li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="card">
+      <h2><span class="num">3</span>あなたに関係する「壁」一覧</h2>
+      <p class="sub">2026年の制度改正後の壁の位置です。<strong style="color:var(--accent-strong);">オレンジの行</strong>があなたの働き方に関係する壁です。</p>
+      <table class="walls" id="wallsTable"></table>
+    </section>
+
+    <section class="card">
+      <h2><span class="num">4</span>損しないためにできること</h2>
+      <ul class="tips" id="tipsList"></ul>
+    </section>
+
+    <!-- AdSense枠②：審査通過後にここへ広告コードを挿入 -->
+
+  </div>
+
+  <section class="card">
+    <h2>あわせて使いたいツール</h2>
+    <p class="sub">同じ運営者による「お金の不安を数字にする」シリーズです。</p>
+    <div class="article-list">
+      <a href="https://fukugyou-sim.com/" target="_blank" rel="noopener">
+        <div class="a-title">副業の税金シミュレーター｜いくらから確定申告？20万円ラインと増える税金を計算</div>
+        <div class="a-desc">確定申告の要否判定・住民税で会社にバレないための手順・増える税額を1分で見える化。</div>
+        <span class="a-more">ツールを開く →</span>
+      </a>
+      <a href="https://taishoku-sim.com/" target="_blank" rel="noopener">
+        <div class="a-title">退職シミュレーター｜失業手当・住民税・国保をまとめて計算</div>
+        <div class="a-desc">退職したら失業手当はいくら・いつから？貯金は何ヶ月もつ？退職後のお金の全体像を1分で見える化。</div>
+        <span class="a-more">ツールを開く →</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="card faq">
+    <h2>よくある質問</h2>
+    <details>
+      <summary>「年収の壁」は2026年にどう変わったのですか？</summary>
+      <div class="a">令和7年度税制改正で、パート本人に所得税がかかり始めるラインは<strong>給与収入160万円</strong>（基礎控除最大95万円＋給与所得控除65万円）に、住民税は<strong>約110万円</strong>に上がりました。配偶者特別控除も妻の給与160万円まで満額38万円になり、「103万円の壁」「150万円の壁」は実質的に160万円に移動しています。さらに2026年10月からは社会保険の「106万円の壁」（月額8.8万円の賃金要件）が撤廃されます。</div>
+    </details>
+    <details>
+      <summary>130万円の壁を超えるとどうなりますか？</summary>
+      <div class="a">勤め先で社会保険に加入しない働き方の場合、年収130万円以上（60歳以上は180万円以上）になると配偶者の社会保険の扶養から外れ、<strong>自分で国民健康保険と国民年金（2026年度は月17,920円）を払う</strong>必要があります。年間負担は40万円前後になることが多く、手取りが逆転する「働き損ゾーン」が発生します。手取りが回復するのはおおむね150〜160万円です。正確な金額は上のシミュレーターで確認できます。</div>
+    </details>
+    <details>
+      <summary>2026年10月の社会保険改正で何が変わりますか？</summary>
+      <div class="a">2025年6月成立の年金制度改正法により、2026年10月1日から短時間労働者の加入要件のうち「月額賃金8.8万円以上」が撤廃されます。<strong>従業員51人以上の企業で週20時間以上働く人は、賃金額にかかわらず厚生年金・健康保険に加入</strong>します（学生は原則対象外）。企業規模要件も2027年10月の36人以上を皮切りに段階的に撤廃され、2035年10月にはすべての企業が対象になる予定です。新たに加入する人の保険料負担を軽減する支援制度（事業主の追加負担による最大3年間の軽減措置）も用意されています。</div>
+    </details>
+    <details>
+      <summary>社会保険に入るのは損ですか？</summary>
+      <div class="a">目先の手取りは給与の約15%減りますが、①<strong>厚生年金で将来の年金が上乗せ</strong>される、②<strong>傷病手当金・出産手当金</strong>がもらえる、③保険料の<strong>半分は会社負担</strong>、というメリットがあります。自分で国民年金・国保を全額払う「130万円超えの扶養外れ」と違い、同じ保険料負担でも受け取れる保障が大きく、長期的には加入した方が有利になるケースが多いです。</div>
+    </details>
+    <details>
+      <summary>一時的に130万円を超えてしまったら扶養から外れますか？</summary>
+      <div class="a">残業や人手不足による一時的な収入増であれば、<strong>事業主の証明により連続2回まで扶養にとどまれる特例</strong>があります（年収の壁・支援強化パッケージ）。また2026年4月からは、被扶養者の判定が過去の収入実績ではなく<strong>雇用契約の内容ベース</strong>に見直され、契約上130万円未満の働き方なら一時的な超過で機械的に外れることはなくなりました。健康保険組合によって運用が異なるため、配偶者の会社の健保にご確認ください。</div>
+    </details>
+    <details>
+      <summary>配偶者手当（家族手当）はどうなりますか？</summary>
+      <div class="a">配偶者手当は法律ではなく<strong>会社の規程</strong>で決まっており、「妻の年収103万円以下」「130万円未満」などの支給条件が一般的です。月1〜2万円の手当なら年12〜24万円に相当し、壁を超えた瞬間に消えるため影響は小さくありません。国は手当の見直し（廃止・縮小）を企業に促しており、廃止する企業も増えています。まず配偶者の会社の支給条件を確認し、上のシミュレーターの詳細設定に入力してください。</div>
+    </details>
+    <details>
+      <summary>計算結果は正確ですか？</summary>
+      <div class="a">税金は国税庁の令和8年分の計算式、社会保険は厚生労働省・日本年金機構の公表資料に基づく概算です。ただし国民健康保険料は市区町村により大きく異なり、健康保険料率も加入する健保組合で変わります。また被扶養者の認定は各健康保険組合の判断によります。正確な金額は市区町村・年金事務所・配偶者の会社の健保組合でご確認ください。</div>
+    </details>
+  </section>
+
+  <div class="disclaimer">
+    <strong>免責事項：</strong>本ツールの結果は2026年7月時点の制度（令和8年分の税制・2026年10月施行の社会保険適用拡大）に基づく概算であり、金額を保証するものではありません。社会保険の加入・扶養の判定は勤務先や健康保険組合の判断により異なる場合があります。正確な判断は市区町村・年金事務所・税務署・健康保険組合等にご確認ください。本ツールの利用により生じた損害について、運営者は責任を負いません。
+  </div>
+
+</div>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="f-logo">
+      <svg viewBox="0 0 40 40" aria-hidden="true">
+        <rect x="2" y="2" width="36" height="36" rx="9" fill="#d97b2e"/>
+        <path d="M9 28 C 13 28, 14 14, 20 14 C 26 14, 25 28, 31 28" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/>
+        <line x1="25.5" y1="9" x2="25.5" y2="21" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="2.4 2.6"/>
+        <rect x="10" y="31.4" width="20" height="2.4" rx="1.2" fill="#f3cfa9"/>
+      </svg>
+      <b>扶養内パートの働き損シミュレーター</b>
+    </div>
+    <p>働き方のお金の不安を、数字に変える。</p>
+    <p>制度データ：国税庁タックスアンサー（No.1191・No.1195ほか）／厚生労働省・日本年金機構（社会保険適用拡大・令和8年度保険料）</p>
+    <p><a href="https://fukugyou-sim.com/" target="_blank" rel="noopener">姉妹サイト：副業の税金シミュレーター</a> ｜ <a href="https://taishoku-sim.com/" target="_blank" rel="noopener">退職シミュレーター</a> ｜ <a href="./privacy.html">プライバシーポリシー・免責事項・運営者情報</a> ｜ <a href="https://forms.gle/fLUeUgyRsNNLhdzbA" target="_blank" rel="noopener">お問い合わせ</a></p>
+    <p>最終更新：2026年7月18日</p>
+  </div>
+</footer>
+
+<script>
+"use strict";
+
+/* ===== 制度定数（更新時はここだけ変える） ===== */
+const C = {
+  updated: "2026-07-17",
+  // 所得税（令和8年分）
+  brackets: [
+    { max: 1949000,  rate: 0.05, sub: 0 },
+    { max: 3299000,  rate: 0.10, sub: 97500 },
+    { max: 6949000,  rate: 0.20, sub: 427500 },
+    { max: 8999000,  rate: 0.23, sub: 636000 },
+    { max: 17999000, rate: 0.33, sub: 1536000 },
+    { max: 39999000, rate: 0.40, sub: 2796000 },
+    { max: Infinity, rate: 0.45, sub: 4796000 },
+  ],
+  reconstruction: 0.021,
+  basicDedTable: [
+    { max: 1320000,  d: 950000 },
+    { max: 3360000,  d: 880000 },
+    { max: 4890000,  d: 680000 },
+    { max: 6550000,  d: 630000 },
+    { max: 23500000, d: 580000 },
+    { max: 24000000, d: 480000 },
+    { max: 24500000, d: 320000 },
+    { max: 25000000, d: 160000 },
+    { max: Infinity, d: 0 },
+  ],
+  // 住民税
+  rtBasicDed: 430000,
+  rtRate: 0.10,
+  rtAdj: 2500,
+  rtFlat: 5000,             // 均等割4,000円＋森林環境税1,000円（標準）
+  rtExemptIncome: 450000,   // 非課税となる合計所得（単身・1級地の目安）
+  // 社会保険（勤務先加入時の本人負担率）
+  empHealth: 0.050,         // 協会けんぽ全国平均10%の折半
+  empCare: 0.008,           // 介護保険（40〜64歳）
+  empPension: 0.0915,       // 厚生年金18.3%の折半
+  empEmployment: 0.005,     // 雇用保険 令和8年度・一般の事業
+  // 扶養から外れた場合
+  fuyoLine: 1300000,
+  fuyoLine60: 1800000,
+  npMonthly: 17920,         // 国民年金 令和8年度
+  nhiRate: 0.105,           // 国保 所得割の概算
+  nhiFlat: 55000,           // 国保 均等割の概算
+  // 配偶者控除・配偶者特別控除（令和7年分以降、所得税）妻の合計所得上限→[夫900万以下, 950万以下, 1000万以下]
+  spousalDed: [
+    { max: 580000,  d: [380000, 260000, 130000] },  // 配偶者控除
+    { max: 950000,  d: [380000, 260000, 130000] },  // ここから配偶者特別控除
+    { max: 1000000, d: [360000, 240000, 120000] },
+    { max: 1050000, d: [310000, 210000, 110000] },
+    { max: 1100000, d: [260000, 180000, 90000] },
+    { max: 1150000, d: [210000, 140000, 70000] },
+    { max: 1200000, d: [160000, 110000, 60000] },
+    { max: 1250000, d: [110000, 80000, 40000] },
+    { max: 1300000, d: [60000, 40000, 20000] },
+    { max: 1330000, d: [30000, 20000, 10000] },
+    { max: Infinity, d: [0, 0, 0] },
+  ],
+  rtSpousalCap: 330000,     // 住民税側の配偶者(特別)控除の上限
+  socialInsRateSpouse: 0.145, // 配偶者の社会保険料の概算率
+};
+
+/* ===== 基本関数 ===== */
+function salaryIncome(gross) {
+  if (gross <= 0) return 0;
+  let d;
+  if (gross <= 1900000) d = 650000;
+  else if (gross <= 3600000) d = gross * 0.30 + 80000;
+  else if (gross <= 6600000) d = gross * 0.20 + 440000;
+  else if (gross <= 8500000) d = gross * 0.10 + 1100000;
+  else d = 1950000;
+  return Math.max(0, Math.round(gross - d));
+}
+function basicDed(total) { return C.basicDedTable.find(b => total <= b.max).d; }
+function incomeTax(taxable) {
+  const t = Math.floor(Math.max(0, taxable) / 1000) * 1000;
+  if (t === 0) return 0;
+  const b = C.brackets.find(x => t <= x.max);
+  return Math.floor(Math.max(0, t * b.rate - b.sub) * (1 + C.reconstruction) / 100) * 100;
+}
+
+/* ===== パート本人の手取り計算 ===== */
+// x=年収, p=入力値。戻り値: {net, tax, soc, breakdown}
+function wifeNet(x, p) {
+  const shahoJoin = p.over20 && p.large;             // 2026年10月〜の加入判定（賃金要件なし）
+  const care = p.age >= 40 && p.age <= 64;
+  const fuyoLine = p.age >= 60 ? C.fuyoLine60 : C.fuyoLine;
+
+  let soc = 0, socLabel = "";
+  if (shahoJoin && x > 0) {
+    const r = C.empHealth + C.empPension + C.empEmployment + (care ? C.empCare : 0);
+    soc = Math.round(x * r);
+    socLabel = "勤務先の社会保険";
+  } else {
+    if (p.over20 && x > 0) soc += Math.round(x * C.empEmployment); // 雇用保険のみ
+    if (x >= fuyoLine) {
+      const np = p.age < 60 ? C.npMonthly * 12 : 0;
+      const nhi = Math.round(Math.max(0, salaryIncome(x) - C.rtBasicDed) * C.nhiRate) + C.nhiFlat;
+      soc += np + nhi;
+      socLabel = "国民年金＋国民健康保険";
+    } else {
+      socLabel = p.over20 ? "雇用保険のみ" : "負担なし（扶養内）";
+    }
+  }
+
+  const si = salaryIncome(x);
+  const it = incomeTax(si - soc - basicDed(si));
+  let rt = 0;
+  if (si > C.rtExemptIncome) {
+    const t = Math.floor(Math.max(0, si - soc - C.rtBasicDed) / 1000) * 1000;
+    rt = Math.max(0, Math.round(t * C.rtRate) - C.rtAdj) + C.rtFlat;
+  }
+  return { net: x - soc - it - rt, soc, it, rt, socLabel, shahoJoin, fuyoLine };
+}
+
+/* ===== 配偶者側の税負担増 ===== */
+// 妻所得→控除額（所得税側）
+function spousalDedIT(wifeIncome, husbandCol) {
+  const wi = salaryIncome(wifeIncome);
+  return C.spousalDed.find(b => wi <= b.max).d[husbandCol];
+}
+// 夫の限界税率などを前計算
+function husbandContext(p) {
+  const hi = salaryIncome(p.spouseIncome);
+  if (hi > 10000000) return null; // 合計所得1000万超は配偶者(特別)控除なし
+  const col = hi <= 9000000 ? 0 : hi <= 9500000 ? 1 : 2;
+  const soc = Math.round(p.spouseIncome * C.socialInsRateSpouse);
+  const taxable = Math.max(0, hi - soc - basicDed(hi) - 380000); // 控除満額時の概算課税所得
+  const b = C.brackets.find(x => Math.max(1000, taxable) <= x.max);
+  return { col, marginalIT: b.rate * (1 + C.reconstruction), hasRT: taxable > 0 };
+}
+// 妻の収入がxのときの夫の税負担増（控除満額38万/33万時との差）
+function husbandTaxIncrease(x, ctx) {
+  if (!ctx) return 0;
+  const dedIT = spousalDedIT(x, ctx.col);
+  const dedRT = Math.min(dedIT, C.rtSpousalCap);
+  const dIT = (380000 - dedIT) * ctx.marginalIT;
+  const dRT = ctx.hasRT ? (330000 - dedRT) * C.rtRate : 0;
+  return Math.round(Math.max(0, dIT) + Math.max(0, dRT));
+}
+
+/* ===== 世帯の手取り増加（妻収入0円比） ===== */
+function householdGain(x, p, ctx) {
+  const w = wifeNet(x, p);
+  const h = husbandTaxIncrease(x, ctx);
+  const allowanceLoss = (p.allowance > 0 && x > p.allowanceLine) ? p.allowance * 12 : 0;
+  return { gain: w.net - h - allowanceLoss, wife: w, husbandUp: h, allowanceLoss };
+}
+
+/* ===== 表示 ===== */
+const $ = id => document.getElementById(id);
+const yen = n => Math.round(n).toLocaleString("ja-JP") + "円";
+const man = n => {
+  const m = n / 10000;
+  return (Math.abs(m) >= 100 ? Math.round(m).toLocaleString("ja-JP") : Math.round(m * 10) / 10) + "万円";
+};
+
+function readParams() {
+  return {
+    income: Math.max(0, +$("income").value || 0) * 10000,
+    age: Math.min(74, Math.max(18, +$("age").value || 40)),
+    over20: document.querySelector('input[name=hours]:checked').value === "over20",
+    large: document.querySelector('input[name=size]:checked').value === "large",
+    spouseIncome: Math.max(0, +$("spouseIncome").value || 0) * 10000,
+    allowance: Math.max(0, +$("allowance").value || 0),
+    allowanceLine: +$("allowanceLine").value,
+  };
+}
+
+let lastRender = null;
+
+function render() {
+  const p = readParams();
+  const ctx = husbandContext(p);
+  const x = p.income;
+  const r = householdGain(x, p, ctx);
+  const w = r.wife;
+
+  // 働き損判定：社保非加入の130万崖
+  let lossZone = false, recovery = null, preCliff = null;
+  if (!w.shahoJoin) {
+    preCliff = householdGain(w.fuyoLine - 10000, p, ctx).gain;
+    if (x >= w.fuyoLine) {
+      lossZone = r.gain < preCliff;
+      if (lossZone) {
+        for (let y = x; y <= 3000000; y += 10000) {
+          if (householdGain(y, p, ctx).gain >= preCliff) { recovery = y; break; }
+        }
+      }
+    }
+  }
+
+  // --- 判定 ---
+  const jv = $("judgeValue"), jn = $("judgeNote");
+  if (lossZone) {
+    jv.textContent = "働き損ゾーンです";
+    jv.className = "value loss";
+    jn.textContent = `⚠ ${man(w.fuyoLine)}の壁の手前より世帯の手取りが少なくなっています`;
+    jn.className = "note warn";
+  } else if (!w.shahoJoin && x >= w.fuyoLine) {
+    jv.textContent = "壁を越えて回復済み";
+    jv.className = "value ok";
+    jn.textContent = `✓ ${man(w.fuyoLine)}の壁を越えていますが、手取りは壁の手前を上回っています`;
+    jn.className = "note ok";
+  } else if (w.shahoJoin) {
+    jv.textContent = "働き損の崖はありません";
+    jv.className = "value ok";
+    jn.textContent = "✓ 勤務先の社会保険に加入する働き方のため、手取りはなだらかに増えます";
+    jn.className = "note ok";
+  } else {
+    jv.textContent = "扶養内で働けています";
+    jv.className = "value";
+    jn.textContent = `${man(w.fuyoLine)}の壁まで、あと${man(w.fuyoLine - x)}です`;
+    jn.className = "note mid";
+  }
+
+  $("judgeStats").innerHTML = `
+    <div class="stat"><div class="k">あなたの手取り（年）</div><div class="v">${man(w.net)}</div></div>
+    <div class="stat"><div class="k">あなたの負担 <small>（税＋保険料）</small></div><div class="v">${man(w.soc + w.it + w.rt)}</div></div>
+    <div class="stat"><div class="k">保険料の種類</div><div class="v" style="font-size:15.5px;line-height:2;">${w.socLabel}</div></div>
+    <div class="stat"><div class="k">配偶者の税負担の増加</div><div class="v">＋${man(r.husbandUp)}</div></div>
+    <div class="stat"><div class="k">配偶者手当への影響</div><div class="v">${r.allowanceLoss > 0 ? `−${man(r.allowanceLoss)}` : p.allowance > 0 ? "支給あり" : "—"}</div></div>
+    <div class="stat"><div class="k">世帯の手取り増 <small>（働かない場合との差）</small></div><div class="v">${man(r.gain)}</div></div>
+  `;
+
+  // 注意書き
+  const alerts = [];
+  if (lossZone && recovery) {
+    alerts.push(`<div class="alert danger"><strong>${man(recovery)}まで働けば手取りが回復します。</strong>いまの年収${man(x)}では、${man(w.fuyoLine)}の壁の手前（世帯手取り増 約${man(preCliff)}）より約${man(preCliff - r.gain)}少ない状態です。中途半端に超えるのが一番損です。</div>`);
+  }
+  if (w.shahoJoin) {
+    alerts.push(`<div class="goodnote"><strong>2026年10月から社会保険の加入対象です。</strong>週20時間以上×従業員51人以上のため、賃金額にかかわらず勤務先の厚生年金・健康保険に加入します（月8.8万円の要件は撤廃）。手取りは約15%減りますが、将来の年金が増え、傷病手当金なども受けられます。9月までは月収8.8万円（年収約106万円）未満なら加入対象外です。</div>`);
+  }
+  if (!w.shahoJoin && p.over20 && !p.large) {
+    alerts.push(`<div class="alert"><strong>従業員50人以下でも要注意。</strong>企業規模の要件は2027年10月から段階的に撤廃されます（2027年10月〜36人以上、2029年10月〜21人以上、2032年10月〜11人以上、2035年10月〜すべての企業）。また労使合意により50人以下でも任意で適用される会社があります。勤務先にご確認ください。</div>`);
+  }
+  if (ctx === null && p.spouseIncome > 0) {
+    alerts.push(`<div class="alert">配偶者の合計所得が1,000万円（給与収入約1,195万円）を超えるため、<strong>配偶者控除・配偶者特別控除は適用されません</strong>。あなたの収入の壁は税・社会保険のものだけです。</div>`);
+  }
+  $("judgeAlerts").innerHTML = alerts.join("");
+
+  // --- 壁一覧表 ---
+  const walls = [
+    { line: "110万円", name: "住民税がかかり始める", hit: true,
+      memo: "令和8年度から100万円→110万円に移動（自治体で若干異なる）。超えても数千円〜なので影響は小さい" },
+    { line: "106万円", name: "【撤廃】旧・社会保険の賃金要件", hit: false, strike: true,
+      memo: "2026年10月1日から月額8.8万円の賃金要件は廃止。以降は週20時間以上×従業員51人以上（→2035年までに全企業）で加入" },
+    { line: p.age >= 60 ? "180万円" : "130万円", name: "社会保険の扶養から外れる", hit: !w.shahoJoin,
+      memo: w.shahoJoin ? "勤務先の社保に加入するため、この壁は関係ありません" : "国民年金＋国保を自分で負担（年40万円前後）。最大の壁。一時的な超過は事業主証明で連続2回まで特例あり" },
+    { line: "160万円", name: "あなたに所得税がかかり始める＆配偶者特別控除の満額ライン", hit: true,
+      memo: "令和7年度改正で103万円→160万円に移動。配偶者特別控除38万円はここまで満額、以降段階的に減り約201万円で消失" },
+  ];
+  if (p.allowance > 0) {
+    walls.splice(p.allowanceLine <= 1060000 ? 1 : 2, 0, {
+      line: man(p.allowanceLine), name: "配偶者手当の支給ライン（会社の規程）", hit: true,
+      memo: `超えると手当 月${p.allowance.toLocaleString()}円（年${man(p.allowance * 12)}）が消失`,
+    });
+  }
+  $("wallsTable").innerHTML = `<tr><th>年収ライン</th><th>何が起きるか</th></tr>` + walls.map(wl => `
+    <tr class="${wl.hit ? "hit" : ""}">
+      <td class="line" ${wl.strike ? 'style="text-decoration:line-through;color:var(--muted);"' : ""}>${wl.line}${wl.hit && !wl.strike ? '<span class="tag you">関係あり</span>' : ""}</td>
+      <td>${wl.name}<span class="memo">${wl.memo}</span></td>
+    </tr>`).join("");
+
+  // --- ヒント ---
+  const tips = [];
+  if (!w.shahoJoin) {
+    tips.push(`<strong>${man(w.fuyoLine)}の壁は「ちょっと超え」が最悪。</strong>超えるなら${recovery ? man(recovery) : "150〜160万円"}以上まで働くか、壁の内側に収めるか、どちらかに寄せるのが鉄則です。`);
+    tips.push("<strong>社会保険に入れる働き方への変更も検討を。</strong>週20時間以上×従業員51人以上の職場なら、国民年金・国保を全額自己負担する扶養外れよりも保険料が安く、将来の年金も増えます。");
+  } else {
+    tips.push("<strong>社保加入で減る手取りは「掛け捨て」ではありません。</strong>厚生年金の上乗せと傷病手当金・出産手当金が付きます。新たに加入する人向けに、保険料負担を軽減する支援制度（事業主の追加負担・最大3年）もあるので勤務先に確認を。");
+  }
+  if (p.allowance > 0) {
+    tips.push(`<strong>配偶者手当（月${p.allowance.toLocaleString()}円）の条件を正確に確認。</strong>「103万円」基準のままの会社も多く、税制上の壁（160万円）と大きくズレています。就業規則か人事に確認しましょう。`);
+  } else {
+    tips.push("<strong>配偶者の会社に家族手当・配偶者手当がないか確認を。</strong>支給条件が妻の年収に連動している場合、壁の位置が変わります（詳細設定に入力すると反映されます）。");
+  }
+  tips.push("<strong>判定は「これからの見込み」でされるのが原則。</strong>2026年4月から被扶養者認定は雇用契約ベースに変わりました。契約を変えずに一時的に超えた場合は、事業主の証明で扶養にとどまれる特例（連続2回まで）があります。");
+  tips.push("<strong>年末に慌てて出勤調整するより、年初に契約時間で設計を。</strong>時給が上がると同じ時間でも年収が壁を超えやすくなります。10月の最低賃金改定後は特に注意してください。");
+  $("tipsList").innerHTML = tips.map(t => `<li>${t}</li>`).join("");
+
+  // --- チャート ---
+  const note = w.shahoJoin
+    ? "社会保険に加入する働き方のため、大きな崖はありません。160万円から所得税、配偶者特別控除の逓減（160万円〜）でゆるやかに傾きが変わります。"
+    : `${man(w.fuyoLine)}で扶養から外れて国民年金・国保の負担が発生するため、グラフに崖ができます。●があなたの現在地です。`;
+  $("chartNote").textContent = note + " グラフにマウス（タップ）すると金額を確認できます。";
+
+  lastRender = { p, ctx };
+  $("results").style.display = "block";
+  drawChart(p, ctx, x);
+}
+
+/* ===== 手取りカーブ（SVG） ===== */
+let resizeTimer = null;
+window.addEventListener("resize", () => {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => {
+    if (lastRender && $("results").style.display === "block") drawChart(lastRender.p, lastRender.ctx, lastRender.p.income);
+  }, 150);
+});
+
+function drawChart(p, ctx, userX) {
+  const XMAX = 2500000;
+  const step = 10000;
+  const data = [];
+  for (let x = 0; x <= XMAX; x += step) data.push({ x, g: householdGain(x, p, ctx).gain });
+
+  const boxW = $("chartBox").clientWidth || 720;
+  const mobile = boxW < 560;
+  const W = mobile ? Math.max(320, Math.round(boxW)) : Math.min(Math.max(Math.round(boxW), 560), 1000);
+  const H = mobile ? 270 : 320;
+  const padL = mobile ? 46 : 62, padR = mobile ? 14 : 16, padT = 20, padB = mobile ? 32 : 36;
+  const fs = mobile ? 11 : 12.5;
+  const plotW = W - padL - padR, plotH = H - padT - padB;
+
+  const maxV = Math.max(...data.map(d => d.g));
+  const pows = [100000, 200000, 250000, 500000, 1000000];
+  const rawStep = maxV / 4;
+  const yStep = pows.find(s => s >= rawStep) || pows[pows.length - 1];
+  const yMax = Math.ceil(maxV / yStep) * yStep || yStep;
+  const xx = v => padL + v / XMAX * plotW;
+  const yy = v => padT + (yMax - v) / yMax * plotH;
+
+  let g = "";
+  for (let v = 0; v <= yMax; v += yStep) {
+    g += `<line x1="${padL}" y1="${yy(v)}" x2="${W - padR}" y2="${yy(v)}" stroke="var(--grid)" stroke-width="1"/>`;
+    g += `<text x="${padL - 7}" y="${yy(v) + 4}" text-anchor="end" font-size="${fs}" fill="var(--muted)" style="font-variant-numeric:tabular-nums">${(v / 10000)}万</text>`;
+  }
+  for (let v = 0; v <= XMAX; v += 500000) {
+    g += `<text x="${xx(v)}" y="${H - 10}" text-anchor="middle" font-size="${fs}" fill="var(--muted)">${v / 10000}万</text>`;
+    g += `<line x1="${xx(v)}" y1="${padT + plotH}" x2="${xx(v)}" y2="${padT + plotH + 4}" stroke="var(--baseline)"/>`;
+  }
+
+  // 壁の縦線
+  const care60 = p.age >= 60 ? C.fuyoLine60 : C.fuyoLine;
+  const wallLines = [{ v: 1100000, l: "110万" }, { v: 1600000, l: "160万" }];
+  if (!(p.over20 && p.large)) wallLines.splice(1, 0, { v: care60, l: (care60 / 10000) + "万", strong: true });
+  wallLines.forEach(wl => {
+    g += `<line x1="${xx(wl.v)}" y1="${padT}" x2="${xx(wl.v)}" y2="${padT + plotH}" stroke="${wl.strong ? "var(--critical)" : "var(--baseline)"}" stroke-width="1" stroke-dasharray="4 4" opacity=".8"/>`;
+    g += `<text x="${xx(wl.v) + 4}" y="${padT + 12}" font-size="${mobile ? 10.5 : 11.5}" fill="${wl.strong ? "var(--critical)" : "var(--muted)"}" font-weight="${wl.strong ? 700 : 400}">${wl.l}</text>`;
+  });
+
+  // 面＋線
+  let path = "", area = `M${xx(0)},${yy(0)}`;
+  data.forEach((d, i) => {
+    const cmd = i === 0 ? "M" : "L";
+    path += `${cmd}${xx(d.x).toFixed(1)},${yy(Math.max(0, d.g)).toFixed(1)}`;
+    area += `L${xx(d.x).toFixed(1)},${yy(Math.max(0, d.g)).toFixed(1)}`;
+  });
+  area += `L${xx(XMAX)},${yy(0)}Z`;
+  g += `<path d="${area}" fill="var(--accent-soft)" opacity=".7"/>`;
+  g += `<path d="${path}" fill="none" stroke="var(--bar)" stroke-width="2.5" stroke-linejoin="round"/>`;
+
+  // 現在地マーカー
+  if (userX <= XMAX) {
+    const ug = householdGain(userX, p, ctx).gain;
+    g += `<circle cx="${xx(userX)}" cy="${yy(Math.max(0, ug))}" r="6" fill="var(--accent)" stroke="#fff" stroke-width="2.5"/>`;
+  }
+
+  // ホバー用ヒットエリア（5万円刻み）
+  let hits = "";
+  for (let v = 0; v <= XMAX; v += 50000) {
+    hits += `<rect class="hit" data-x="${v}" x="${xx(v) - plotW / (XMAX / 50000) / 2}" y="${padT}" width="${plotW / (XMAX / 50000)}" height="${plotH}" fill="transparent"/>`;
+  }
+
+  $("chart").innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="パート年収別の世帯手取り増加グラフ">${g}${hits}</svg>`;
+
+  const tooltip = $("tooltip"), box = $("chartBox");
+  $("chart").querySelectorAll(".hit").forEach(el => {
+    el.addEventListener("mouseenter", () => {
+      const v = +el.dataset.x;
+      const r = householdGain(v, p, ctx);
+      tooltip.innerHTML = `<span class="t">年収 ${man(v)}</span><br>世帯手取り増 ${man(r.gain)}<br>あなたの手取り ${man(r.wife.net)}${r.husbandUp > 0 ? `<br>配偶者の税増 −${man(r.husbandUp)}` : ""}${r.allowanceLoss > 0 ? `<br>手当消失 −${man(r.allowanceLoss)}` : ""}`;
+      const rect = el.getBoundingClientRect(), brect = box.getBoundingClientRect();
+      tooltip.style.left = (rect.left - brect.left + rect.width / 2) + "px";
+      tooltip.style.top = (rect.top - brect.top + 14) + "px";
+      tooltip.style.opacity = "1";
+    });
+    el.addEventListener("mouseleave", () => { tooltip.style.opacity = "0"; });
+  });
+}
+
+/* ===== シェア ===== */
+const SITE_URL = location.origin.startsWith("http") ? location.origin + location.pathname : "";
+const SHARE_TEXT = "扶養内パートの働き損シミュレーター｜年収の壁と世帯の手取りを1分でチェック";
+$("shareX").href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(SHARE_TEXT)}&url=${encodeURIComponent(SITE_URL)}`;
+$("shareLine").href = `https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(SITE_URL)}`;
+$("copyUrlBtn").addEventListener("click", () => {
+  navigator.clipboard.writeText(SITE_URL).then(() => {
+    $("copyUrlBtn").textContent = "✓ コピーしました";
+    setTimeout(() => { $("copyUrlBtn").textContent = "🔗 URLをコピー"; }, 1800);
+  });
+});
+
+/* ===== イベント ===== */
+["hoursGroup", "sizeGroup"].forEach(gid => {
+  document.querySelectorAll(`#${gid} label`).forEach(l => {
+    l.addEventListener("click", () => {
+      document.querySelectorAll(`#${gid} label`).forEach(x => x.classList.remove("on"));
+      l.classList.add("on");
+      l.querySelector("input").checked = true;
+      if ($("results").style.display === "block") render();
+    });
+  });
+});
+document.querySelectorAll("#form input[type=number], #form select").forEach(el => {
+  el.addEventListener("input", () => { if ($("results").style.display === "block") render(); });
+});
+$("calcBtn").addEventListener("click", () => {
+  render();
+  $("results").scrollIntoView({ behavior: "smooth", block: "start" });
+});
+</script>
+</body>
+</html>
